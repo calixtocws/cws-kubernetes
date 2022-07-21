@@ -1,0 +1,28 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+metadata:
+  name: cws-spot
+  region: us-east-2
+  version: "1.22"
+vpc:
+  id: "vpc-0b866e3eb427dd056"
+  subnets:
+    private:
+      us-east-2a:
+          id: "subnet-0c6623bc344a8ff19"
+      us-east-2c:
+          id: "subnet-04610db67a276439b"
+    public:
+      us-east-2a:
+          id: "subnet-0a46762caf8550df8"
+      us-east-2c:
+          id: "subnet-079265c0ec04a18cc"
+  nat:
+    gateway: Single
+managedNodeGroups:
+- name: cws-group
+  amiFamily: Ubuntu2004
+  instanceType: t3.small
+  minSize: 3
+  maxSize: 6
+  spot: true

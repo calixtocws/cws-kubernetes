@@ -1,0 +1,10 @@
+{
+  "apiVersion": "v1",
+  "kind": "Namespace",
+  "metadata": {
+    "name": "cws-spot",
+    "labels": {
+      "name": "cws-spot"
+    }
+  }
+}
