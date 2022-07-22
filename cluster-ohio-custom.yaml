@@ -5,24 +5,31 @@ metadata:
   region: us-east-2
   version: "1.22"
 vpc:
-  id: "vpc-0b866e3eb427dd056"
+  id: "vpc-092e268171e9ee226"
   subnets:
     private:
       us-east-2a:
-          id: "subnet-0c6623bc344a8ff19"
+          id: "subnet-02c0fb78f2f3a7100"
       us-east-2c:
-          id: "subnet-04610db67a276439b"
+          id: "subnet-051a552271e173fe3"
     public:
       us-east-2a:
-          id: "subnet-0a46762caf8550df8"
+          id: "subnet-0db3a6bbd139635fd"
       us-east-2c:
-          id: "subnet-079265c0ec04a18cc"
+          id: "subnet-03eca0b937094b155"
   nat:
-    gateway: Single
+    gateway: Single  
 managedNodeGroups:
-- name: cws-group
+- name: cws-group-public
   amiFamily: Ubuntu2004
-  instanceType: t3.small
-  minSize: 3
-  maxSize: 6
+  instanceType: t3.xlarge
+  minSize: 2
+  maxSize: 3
   spot: true
+- name: cws-group-private
+  amiFamily: Ubuntu2004
+  instanceType: m4.2xlarge
+  minSize: 2
+  maxSize: 3
+  spot: true
+  privateNetworking: true  
