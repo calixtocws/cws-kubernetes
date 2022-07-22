@@ -27,5 +27,5 @@ managedNodeGroups:
   amiFamily: Ubuntu2004
   instanceType: m4.2xlarge
   desiredCapacity: 2
-  spot: true
+#  spot: true
   privateNetworking: true  
