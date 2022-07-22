@@ -22,7 +22,7 @@ nodeGroups:
   amiFamily: AmazonLinux2
   instanceType: t3.xlarge
   desiredCapacity: 2
-  spot: true
+#  spot: true
 - name: cws-group-private
   amiFamily: AmazonLinux2
   instanceType: m4.2xlarge
