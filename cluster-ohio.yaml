@@ -17,12 +17,13 @@ vpc:
           id: "subnet-02c0fb78f2f3a7100"
       us-east-2c:
           id: "subnet-051a552271e173fe3"
-nodeGroups:
+managedNodeGroups:
 - name: cws-group-public
   amiFamily: AmazonLinux2
   instanceType: t3.xlarge
   desiredCapacity: 2
-#  spot: true
+  spot: true
+nodeGroups:
 - name: cws-group-private
   amiFamily: AmazonLinux2
   instanceType: m4.2xlarge
