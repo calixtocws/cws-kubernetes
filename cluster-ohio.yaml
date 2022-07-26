@@ -22,13 +22,12 @@ vpc:
       us-east-2c:
           id: subnet-051a552271e173fe3
           cidr: "10.239.96.0/19"
-managedNodeGroups:
+nodeGroups:
 - name: cws-group-public
   amiFamily: Ubuntu2004
   instanceType: t3.xlarge
   desiredCapacity: 2
-  spot: true
-nodeGroups:
+ # spot: true
 - name: cws-group-private
   amiFamily: Ubuntu2004
   instanceType: m4.2xlarge
