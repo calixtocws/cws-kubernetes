@@ -23,10 +23,10 @@ vpc:
           id: subnet-051a552271e173fe3
           cidr: "10.239.96.0/19"
 nodeGroups:
-- name: cws-group-public
-  amiFamily: Ubuntu2004
-  instanceType: t3.xlarge
-  desiredCapacity: 2
+#- name: cws-group-public
+ # amiFamily: Ubuntu2004
+  #instanceType: t3.xlarge
+  #desiredCapacity: 2
  # spot: true
 - name: cws-group-private
   amiFamily: Ubuntu2004
