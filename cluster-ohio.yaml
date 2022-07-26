@@ -11,13 +11,17 @@ vpc:
     public:
       us-east-2a:
           id: subnet-0db3a6bbd139635fd
+          cidr: "10.239.0.0/19"
       us-east-2c:
           id: subnet-03eca0b937094b155
+          cidr: "10.239.32.0/19"
     private:
       us-east-2a:
           id: subnet-02c0fb78f2f3a7100
+          cidr: "10.239.64.0/19"
       us-east-2c:
           id: subnet-051a552271e173fe3
+          cidr: "10.239.96.0/19"
 managedNodeGroups:
 - name: cws-group-public
   amiFamily: Ubuntu2004
