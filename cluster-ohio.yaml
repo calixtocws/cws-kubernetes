@@ -4,13 +4,14 @@ metadata:
   name: cws-spot
   region: us-east-2
   version: "1.22"
-nodeGroups:
+managedNodeGroups:
 - name: cws-group-public
   amiFamily: Ubuntu2004
   instanceType: t3.xlarge
   minSize: 2
   maxSize: 3
   spot: true
+nodeGroups:  
 - name: cws-group-private
   amiFamily: Ubuntu2004
   instanceType: m4.2xlarge
