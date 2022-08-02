@@ -8,7 +8,8 @@ nodeGroups:
 - name: cws-group-public
   amiFamily: Ubuntu2004
   instanceType: t3.xlarge
-  desiredCapacity: 2
+  minSize: 2
+  maxSize: 3
   spot: true
 - name: cws-group-private
   amiFamily: Ubuntu2004
