@@ -1,19 +1,7 @@
-apiVersion: eksctl.io/v1alpha5
-kind: ClusterConfig
-metadata:
-  name: devops-catalog
-  region: us-east-2
-  version: "1.22"
 managedNodeGroups:
-- name: cws-onegroup
+- name: cws-group-public
   amiFamily: Ubuntu2004
-  instanceType: t3.small
-  minSize: 3
-  maxSize: 6
-  iam:
-    withAddonPolicies:
-      albInbgress: true
-vpc:
-  id: vpc-0b866e3eb427dd056
-iam:
-  serviceRoleARN: AWSServiceRoleForAmazonEKS
+  instanceType: t3.xlarge
+  minSize: 2
+  maxSize: 3
+  spot: true
