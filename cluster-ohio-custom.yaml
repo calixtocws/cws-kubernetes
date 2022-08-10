@@ -1,37 +1,23 @@
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 metadata:
-  name: cws-kubernetes
+  name: cws-k-spot
   region: us-east-2
   version: "1.22"
 vpc:
-  id: "vpc-028ee94e76e106c5b"
-  cidr: "10.238.0.0/16"
+  id: "vpc-0b866e3eb427dd056"
   subnets:
     public:
       us-east-2a:
-          id: subnet-0930cfcff0dd489f3
-          cidr: "10.238.0.0/18"
+          id: subnet-0f9c7d6da0ddfe6dd
       us-east-2b:
-          id: subnet-0756fc2f7c91e43b5
-          cidr: "10.238.64.0/18"
+          id: subnet-023432486b48215ac
+      us-east-2c:
+          id: subnet-0f23c7f3d79273530          
     private:
       us-east-2a:
-          id: subnet-0adb671c0f2e88589
-          cidr: "10.238.128.0/18"
+          id: subnet-0fa6570b1ec4261d8
       us-east-2b:
-          id: subnet-03090c24a135ef60c
-          cidr: "10.238.192.0/18"
-managedNodeGroups:
-- name: cws-group-public
-  amiFamily: Ubuntu2004
-  instanceType: t3.xlarge
-  desiredCapacity: 2
-  spot: true
-nodeGroups:
-- name: cws-group-private
-  amiFamily: Ubuntu2004
-  instanceType: m4.2xlarge
-  desiredCapacity: 2
-#  spot: true
-  privateNetworking: true  
+          id: subnet-04598072ce5318c8c
+      us-east-2c:
+          id: subnet-05eed30ea3b433ce9           
