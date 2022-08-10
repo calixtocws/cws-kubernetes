@@ -20,4 +20,11 @@ vpc:
       us-east-2b:
           id: subnet-04598072ce5318c8c
       us-east-2c:
-          id: subnet-05eed30ea3b433ce9           
+          id: subnet-05eed30ea3b433ce9 
+managedNodeGroups:
+- name: cws-group-public
+  amiFamily: Ubuntu2004
+  instanceType: t3.xlarge
+  minSize: 2
+  maxSize: 3
+  spot: true          
